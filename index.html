@@ -214,7 +214,8 @@
 					$('.navbar-default').addClass('show');
 					$('.navbar').addClass('shrink');
 					$('.home-btn').show();
-						} else {
+						} 
+				else {
 					$('.navbar-default').removeClass('show');
 					$('.navbar').removeClass('shrink');
 					$('.home-btn').hide();
@@ -224,17 +225,13 @@
 				target: '.navbar',
 			})
 			$('a[href^="#"]').on('click',function (e) {
-		    e.preventDefault();
+		   	e.preventDefault();
 	
-		    var target = this.hash;
-		    var $target = $(target);
+				var target = this.hash;
+				var $target = $(target);
 	
-		    $('html, body').stop().animate({
-					'scrollTop': $target.offset().top
-				}, 500, 'swing');
+		   	$('html, body').stop().animate({'scrollTop': $target.offset().top}, 500, 'swing');
 			});
-		});
-		$(function(){
 			$(".element").typed({
 				strings: ["Web", "Graphic"],
 				typeSpeed: 50,
